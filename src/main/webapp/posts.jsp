@@ -50,6 +50,7 @@
 	<th>Writer</th>
 	<th>Content</th>
 	<th>Regdate</th>
+	<th>UpdateDate</th>
 	<th>Edit</th>
 	<th>Delete</th>
 </tr>
@@ -61,6 +62,7 @@
 		<td>${u.getWriter()}</td>
 		<td>${u.getContent()}</td>
 		<td>${u.getRegdate()}</td>
+		<td>${u.getUpdateDate()}</td>
 		<td><a href="editform.jsp?id=${u.getSeq()}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
 	</tr>

@@ -1,4 +1,4 @@
-package com.example.test1.bean;
+package com.example.project4_final.bean;
 
 import java.util.Date;
 
@@ -9,7 +9,6 @@ public class BoardVO {
 	private String writer;
 	private String content;
 	private Date regdate;
-	private Date updateDate;
 	private int cnt;
 	
 	public int getSeq() {
@@ -18,11 +17,9 @@ public class BoardVO {
 	public void setSeq(int seq) {
 		this.seq = seq;
 	}
-
-	public String getCategory() {
+	public String getCategory(){
 		return category;
 	}
-
 	public void setCategory(String category) {
 		this.category = category;
 	}
@@ -51,14 +48,6 @@ public class BoardVO {
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
-	public Date getUpdateDate(){
-		return updateDate;
-	}
-
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
-	}
-
 	public int getCnt() {
 		return cnt;
 	}
