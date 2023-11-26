@@ -1,4 +1,7 @@
-package com.example.project4_final.dao;
+package com.example.test1.dao;
+
+import com.example.test1.bean.BoardVO;
+import com.example.test1.util.JDBCUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,16 +9,13 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.project4_final.bean.BoardVO;
-import com.example.project4_final.util.JDBCUtil;
-
 public class BoardDAO {
 	
 	Connection conn = null;
 	PreparedStatement stmt = null;
 	ResultSet rs = null;
 
-	private final String BOARD_INSERT = "insert into BOARD (category, title, writer, content) values (?, ?,?,?)";
+	private final String BOARD_INSERT = "insert into BOARD (category, title, writer, content) values (?,?,?,?)";
 	private final String BOARD_UPDATE = "update BOARD set category=?, title=?, writer=?, content=? where seq=?";
 	private final String BOARD_DELETE = "delete from BOARD  where seq=?";
 	private final String BOARD_GET = "select * from BOARD  where seq=?";
@@ -26,7 +26,7 @@ public class BoardDAO {
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_INSERT);
-			stmt.setString(1,vo.getCategory());
+			stmt.setString(1, vo.getCategory());
 			stmt.setString(2, vo.getTitle());
 			stmt.setString(3, vo.getWriter());
 			stmt.setString(4, vo.getContent());
@@ -55,7 +55,7 @@ public class BoardDAO {
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_UPDATE);
-			stmt.setString(1,vo.getCategory());
+			stmt.setString(1, vo.getCategory());
 			stmt.setString(2, vo.getTitle());
 			stmt.setString(3, vo.getWriter());
 			stmt.setString(4, vo.getContent());

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="com.example.project4_final.dao.BoardDAO, com.example.project4_final.bean.BoardVO"%>
+<%@page import="com.example.test1.dao.BoardDAO, com.example.test1.bean.BoardVO"%>
 <%
 	String sid = request.getParameter("id");
 	if (sid != ""){  
